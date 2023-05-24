@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  font-size: 10rem;
+}
+
+.button{
+  height: 5rem;
+  width: 5rem;
+  font-size: 5rem;
+  text-shadow: 2px 2px 2px rgb(114, 146, 33);
 }
 
 .App-logo {
