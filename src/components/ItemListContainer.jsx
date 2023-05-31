@@ -1,22 +1,21 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import Dropdown from 'react-bootstrap/Dropdown'
+import React from "react";
+import ItemListButtons from "./ItemListButtons";
 
-const itemListContainer = () => {
+
+
+const ItemListContainer = ({text, text2}) => {
+
+  const greeting = () => {
+    console.log(text)
+  }
+
+  const greeting2 = () => {
+    console.log(text2)
+  }
+
   return (
-    <Dropdown as={ButtonGroup}>
-    <Button variant="success">Fungi</Button>
+    <ItemListButtons callback={greeting} segundoCallback={greeting2}/>
+  );
+};
 
-    <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
-
-    <Dropdown.Menu>
-      <Dropdown.Item href="#">Psylocibe</Dropdown.Item>
-      <Dropdown.Item href="#">Shitake</Dropdown.Item>
-      <Dropdown.Item href="#">Pine</Dropdown.Item>
-    </Dropdown.Menu>
-  </Dropdown>
-  )
-}
-
-export default itemListContainer
+export default ItemListContainer;
