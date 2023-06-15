@@ -1,20 +1,13 @@
 import React from "react";
-import ItemListButtons from "./ItemListButtons";
+import CardComponent from "./cardStuff/CardComponent";
 
-
-
-const ItemListContainer = ({text, text2}) => {
-
-  const greeting = () => {
-    console.log(text)
-  }
-
-  const greeting2 = () => {
-    console.log(text2)
-  }
-
+const ItemListContainer = ({ products }) => {
   return (
-    <ItemListButtons callback={greeting} segundoCallback={greeting2}/>
+    <div>
+      {products.map((product) => {
+        return <CardComponent key={product.id} products={product} />;
+      })}
+    </div>
   );
 };
 
