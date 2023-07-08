@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const ButtonContainedDefault = () => {
+const ButtonContainedDefault = ({ text }) => {
   return (
     <div>
-      <Button variant="contained">Contained</Button>
+      <Button variant="contained">{text}</Button>
     </div>
   );
 };

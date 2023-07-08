@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 import CartWidget from "./CartWidget";
 import ButtonCategoryList from "./buttons/ButtonCategoryList";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -15,7 +16,7 @@ const NavBar = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand href="#">Mushroom Store</Navbar.Brand>
+          <Link to={`/`}><Navbar.Brand>Mushroom Store</Navbar.Brand></Link>
           <Nav className="me-auto">
             <Nav.Link href="#">Home</Nav.Link>
             <Nav.Link href="#">Features</Nav.Link>
